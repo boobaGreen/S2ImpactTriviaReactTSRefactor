@@ -22,7 +22,7 @@ const App = () => {
     setGameStatus,
   } = useGame();
 
-  // Rendering the main layout with conditional rendering based on game status and user dat a
+  // Rendering the main layout with conditional rendering based on game status and user data
   return (
     <Layout user={user} handleRemoveUser={handleRemoveUser}>
       {user.name === "" ? (
