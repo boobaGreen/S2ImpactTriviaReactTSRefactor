@@ -45,19 +45,20 @@
 
 ---
 
-## 📦 Features
+## 📦 Features and Decision
 
 <code>► the app will open with the request to enter a username if not already present on local host. At that point we will start with the first set of multiple answer questions, there are 10 questions .
 A final screen will give the score obtained, to which a "skill" level will be associated (for example, from 1 to 3 correct answers -> basic, from 4 to 7 correct answers -> intermediate, from 8 to 9 correct answers -> expert /a, 10 correct answers -> teacher)
 you can share the result on a social network, currently Twitter - X .
-For each correct or incorrect answer there will be a graphic pop up to provide feedback. -</code>
+For each correct or incorrect answer there will be a graphic pop up to provide feedback.
+the questions will have to be inserted in the quiz.ts file in the src/level1 path and will have to be encrypted before putting the app online. to encrypt them, launch as per the instructions: npm run encrypt-answers, at which point you will find a new file "solutionEncrypted.json" in the same folder which will be decrypted by a custom hook.ovviamente il fie "originalAnswers" si potrebbe cancellare ma per motivi solo di chiarezza e in questa demo lo lascio nel repo. to encrypt and decrypt I use CriptoJS and a key that is in .env. for clarity I left a ".envfake" file to give an example of how to insert the key :all this to avoid giving users the chance to discover the correct answers without creating a backend.
+non ho usato useReducer perché' il rpop drill non e' mai più di un livello , per organizzare e pulire il codice ho usato un paio di custom hook.
+
+-</code>
 
 ---
 
-## 📂 Repository Structure
-
-````sh
-##  Repository Structure
+## Repository Structure
 
 ```sh
 └── S2ImpactTriviaReactTSRefactor/
@@ -84,7 +85,6 @@ For each correct or incorrect answer there will be a graphic pop up to provide f
     │   ├── Layout.tsx
     │   ├── Logo.tsx
     │   ├── Modal.tsx
-    │   ├── NoSuccess.tsx
     │   ├── Quiz.tsx
     │   ├── QuizQuestion.tsx
     │   ├── ScorePopup.tsx
@@ -100,17 +100,16 @@ For each correct or incorrect answer there will be a graphic pop up to provide f
     │   │       └── types.tsx
     │   ├── main.tsx
     │   ├── quiz
-    │   │   ├── level1
-    │   │   │   ├── originalAnsewer.json
-    │   │   │   ├── quiz.ts
-    │   │   │   └── solutionEncrypted.json
-    │   │
+    │   │   └── level1
+    │   │       ├── originalAnsewer.json
+    │   │       ├── quiz.ts
+    │   │       └── solutionEncrypted.json
     │   └── vite-env.d.ts
     ├── tailwind.config.js
     ├── tsconfig.json
     ├── tsconfig.node.json
     └── vite.config.ts
-````
+```
 
 ---
 

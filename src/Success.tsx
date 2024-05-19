@@ -29,10 +29,12 @@ export default function Success({ handleSetToQuiz, skillLevel }: TSucces) {
       </section>
       <div className="flex justify-center flex-col w-full gap-6 mt-6">
         <div className="flex justify-center flex-col gap-4 content-center">
-          <p>
-            Hai ottenuto il livello <span>{skillLevel}</span>
+          <p className="flex justify-center">
+            Hai ottenuto il livello {skillLevel}
           </p>
-          <p>Condividi il tuo risultato su Twitter</p>
+          <p className="flex justify-center">
+            Condividi il tuo risultato su Twitter
+          </p>
         </div>
         <div className="flex justify-center text-[#38ded9]">
           <TwitterShareButton
