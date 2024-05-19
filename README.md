@@ -47,12 +47,17 @@
 
 ## 📦 Features
 
-<code>► the app will open with the request to enter a username if not already present on local host. At that point we will start with the first set of multiple answer questions, there are 3 levels with 10 questions for each level. if you answer at least 6 out of 10 questions well you move on to the next level. once you have reached the third level and passed it, you will start again from the first level. At the end of each level you will receive a confirmation message whether you have passed the level or not, if so you will be able to share the experience on social media - at the moment Twitter(X) is managed -
+<code>► the app will open with the request to enter a username if not already present on local host. At that point we will start with the first set of multiple answer questions, there are 10 questions .
+A final screen will give the score obtained, to which a "skill" level will be associated (for example, from 1 to 3 correct answers -> basic, from 4 to 7 correct answers -> intermediate, from 8 to 9 correct answers -> expert /a, 10 correct answers -> teacher)
+you can share the result on a social network, currently Twitter - X .
 For each correct or incorrect answer there will be a graphic pop up to provide feedback. -</code>
 
 ---
 
 ## 📂 Repository Structure
+
+````sh
+##  Repository Structure
 
 ```sh
 └── S2ImpactTriviaReactTSRefactor/
@@ -99,20 +104,13 @@ For each correct or incorrect answer there will be a graphic pop up to provide f
     │   │   │   ├── originalAnsewer.json
     │   │   │   ├── quiz.ts
     │   │   │   └── solutionEncrypted.json
-    │   │   ├── level2
-    │   │   │   ├── originalAnsewer.json
-    │   │   │   ├── quiz.ts
-    │   │   │   └── solutionEncrypted.json
-    │   │   └── level3
-    │   │       ├── originalAnsewer.json
-    │   │       ├── quiz.ts
-    │   │       └── solutionEncrypted.json
+    │   │
     │   └── vite-env.d.ts
     ├── tailwind.config.js
     ├── tsconfig.json
     ├── tsconfig.node.json
     └── vite.config.ts
-```
+````
 
 ---
 
@@ -149,7 +147,6 @@ For each correct or incorrect answer there will be a graphic pop up to provide f
 | [vite-env.d.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/vite-env.d.ts)       | <code>► </code>                       |
 | [UserInput.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/UserInput.tsx)       | <code>► UserInput component</code>    |
 | [Layout.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Layout.tsx)             | <code>► Main layout component</code>  |
-| [NoSuccess.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/NoSuccess.tsx)       | <code>► Nosucces component</code>     |
 | [App.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/App.tsx)                   | <code>► App component</code>          |
 | [Quiz.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Quiz.tsx)                 | <code>► Quiz component</code>         |
 | [index.css](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/index.css)               | <code>► main style css file</code>    |
@@ -164,26 +161,6 @@ For each correct or incorrect answer there will be a graphic pop up to provide f
 | [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/solutionEncrypted.json) | <code>► level 1 solution encrypted</code> |
 | [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/quiz.ts)                               | <code>► level 1 quiz</code>               |
 | [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
-
-</details>
-
-<details closed><summary>src.quiz.level3</summary>
-
-| File                                                                                                                                     | Summary                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/solutionEncrypted.json) | <code>► level 2 solution encrypted</code> |
-| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/quiz.ts)                               | <code>► level 2 quiz</code>               |
-| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
-
-</details>
-
-<details closed><summary>src.quiz.level2</summary>
-
-| File                                                                                                                                     | Summary                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/solutionEncrypted.json) | <code>► level 3 solution encrypted</code> |
-| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/quiz.ts)                               | <code>► level 3 quiz</code>               |
-| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
 
 </details>
 
@@ -251,6 +228,21 @@ npm run dev
 
 ---
 
+### 🤖 Decrypt your answer
+
+Use the following command to decrypt your answer :
+
+```sh
+npm run encrypt-answers
+
+```
+
+The file with noy decrypted answer must be on src/quiz/level1 directory and the name must be originalAnswers.json
+
+````
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here are several ways you can contribute:
@@ -266,7 +258,8 @@ Contributions are welcome! Here are several ways you can contribute:
 2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
    ```sh
    git clone https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor
-   ```
+````
+
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
    git checkout -b new-feature-x

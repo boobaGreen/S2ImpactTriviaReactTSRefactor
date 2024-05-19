@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
 
 // useDecryptedAnswers hook: This hook takes a level number as input and returns the decrypted answers for that level.
-const useDecryptedAnswers = (level: number): string[] => {
+const useDecryptedAnswers = (): string[] => {
   // State to hold the decrypted answers
   const [answers, setAnswers] = useState<string[]>([]);
 
   // Effect hook to decrypt the answers when the level changes
   useEffect(() => {
     // Dynamically import the encrypted solutions for the current level
-    import(`../../quiz/level${level}/solutionEncrypted.json`)
+    import(`../../quiz/level1/solutionEncrypted.json`)
       .then((module) => {
         // Get the decryption key from environment variables
         const key = import.meta.env.VITE_KEY_DECRYPTION as string;
@@ -23,7 +23,7 @@ const useDecryptedAnswers = (level: number): string[] => {
         const decryptedData = bytes.toString(CryptoJS.enc.Utf8);
 
         // Log the decrypted data
-        console.log(`Decrypted data for level ${level}:`, decryptedData);
+        console.log(`Decrypted data :`, decryptedData);
 
         let decryptedAnswers: string[] = [];
         if (decryptedData) {
@@ -31,10 +31,7 @@ const useDecryptedAnswers = (level: number): string[] => {
             // Parse the decrypted data into an array of answers
             decryptedAnswers = JSON.parse(decryptedData);
           } catch (error) {
-            console.error(
-              `Failed to parse decrypted data for level ${level}`,
-              error
-            );
+            console.error(`Failed to parse decrypted data `, error);
           }
         }
 
@@ -42,12 +39,9 @@ const useDecryptedAnswers = (level: number): string[] => {
         setAnswers(decryptedAnswers);
       })
       .catch((error) =>
-        console.error(
-          `Failed to load encrypted solutions for level ${level}`,
-          error
-        )
+        console.error(`Failed to load encrypted solutions `, error)
       );
-  }, [level]);
+  }, []);
 
   // Return the decrypted answers
   return answers;

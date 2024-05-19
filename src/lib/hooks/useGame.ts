@@ -13,7 +13,6 @@ export const useGame = () => {
     {
       name: "",
       singleGamePoints: 0,
-      level: 0,
     } || null
   );
 
@@ -32,7 +31,7 @@ export const useGame = () => {
 
   // Handler for form submission
   const handleSubmit = () => {
-    setUser({ name: inputValue, singleGamePoints: 0, level: 1 });
+    setUser({ name: inputValue, singleGamePoints: 0 });
     setGameStatus(GameStatus.Quiz);
   };
 

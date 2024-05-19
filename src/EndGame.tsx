@@ -3,8 +3,9 @@ import { FC } from "react";
 
 import { GameStatus, TUser } from "./lib/types/types";
 
-import NoSuccess from "./NoSuccess";
 import Success from "./Success";
+
+import { SkillLevel } from "./lib/types/types";
 
 // Type definition for the props of EndGame component
 type EndQuizProps = {
@@ -21,14 +22,22 @@ const EndGame: FC<EndQuizProps> = ({ user, setGameStatus, setUser }) => {
     setUser((user) => ({ ...user, singleGamePoints: 0 }));
   }
 
+  // Determine the skill level based on the number of correct answers
+  let skillLevel;
+  if (user.singleGamePoints <= 3) {
+    skillLevel = SkillLevel.Base;
+  } else if (user.singleGamePoints <= 7) {
+    skillLevel = SkillLevel.Intermediate;
+  } else if (user.singleGamePoints <= 9) {
+    skillLevel = SkillLevel.Expert;
+  } else {
+    skillLevel = SkillLevel.Master;
+  }
+
   // Rendering the Success or NoSuccess component based on the user's single game points
   return (
     <div className="text-white flex justify-center font-press-start text-base">
-      {user.singleGamePoints >= 6 ? (
-        <Success user={user} handleSetToQuiz={handleSetToQuiz} />
-      ) : (
-        <NoSuccess handleSetToQuiz={handleSetToQuiz} />
-      )}
+      <Success handleSetToQuiz={handleSetToQuiz} skillLevel={skillLevel} />
     </div>
   );
 };

@@ -33,10 +33,6 @@ function Header({ user, handleRemoveUser }: THeader) {
                 <p className="font-press-start">Points</p>
                 <p className="font-press-start">{user?.singleGamePoints}</p>
               </div>
-              <div className="flex justify-center gap-2">
-                <p className="font-press-start">Level</p>
-                <p className="font-press-start">{user?.level}</p>
-              </div>
             </div>
             <div className="mt-6 flex w-full justify-end text-base gap-2 ">
               <div className="font-press-start">{user?.name.toUpperCase()}</div>

@@ -11,9 +11,9 @@ dotenv.config({ path: ".env" });
 const key = process.env.VITE_KEY_DECRYPTION;
 
 // Define a function to encrypt answers
-const encryptAnswers = (level) => {
+const encryptAnswers = () => {
   // File containing the unencrypted correct answers
-  const filePath = `./src/quiz/level${level}/originalAnsewer.json`;
+  const filePath = `./src/quiz/level1/originalAnswers.json`;
 
   // Read the content of the JSON file
   const rawData = fs.readFileSync(filePath, "utf8");
@@ -29,15 +29,14 @@ const encryptAnswers = (level) => {
 
   // Write the encrypted data to a new JSON file
   fs.writeFileSync(
-    `./src/quiz/level${level}/solutionEncrypted.json`,
+    `./src/quiz/level1/solutionEncrypted.json`,
     JSON.stringify({ encryptedAnswers }),
     "utf8"
   );
 };
 
-// Encrypt answers for each level
-for (let level = 1; level <= 3; level++) {
-  encryptAnswers(level);
-}
+// Encrypt answers
+
+encryptAnswers();
 
 console.log("Correct answers successfully encrypted!");

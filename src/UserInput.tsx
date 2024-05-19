@@ -37,8 +37,17 @@ export default function UserInput({
       <div className="flex justify-center">
         {/* The submit button calls handleSubmit when it's clicked */}
         <button onClick={handleSubmit}>
-          <FaPlay color={"#454444"} />
+          <FaPlay color={"#ffff"} size={30} />
         </button>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex justify-center text-[white] font-press-start text-xs">
+          Inserisci il tuo nome - premi la freccia e inzia il quiz
+        </div>
+
+        <div className="flex justify-center text-[white] font-press-start text-sm mt-6">
+          Buona fortuna!
+        </div>
       </div>
     </div>
   );

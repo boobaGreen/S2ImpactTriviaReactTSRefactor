@@ -9,5 +9,14 @@ export enum GameStatus {
 export type TUser = {
   name: string; // The name of the user
   singleGamePoints: number; // The points the user has scored in a single game
-  level: number; // The current level of the user in the game
 };
+
+// Enum for skill levels
+export enum SkillLevel {
+  Base = "Base",
+  Intermediate = "Intermedio",
+  Expert = "Esperto",
+  Master = "Maestro",
+}
+
+export type TQuiz = { question: string; answers: string[] };

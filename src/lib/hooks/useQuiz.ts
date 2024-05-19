@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useDecryptedAnswers from "./useDecryptedAnswers"; // Custom hook for getting decrypted answers
-import { GameStatus, TUser } from "../types/types"; // Importing necessary types
+import { GameStatus, TUser, TQuiz } from "../types/types"; // Importing necessary types
 
 // Custom hook to manage quiz state
 export const useQuiz = (
@@ -9,10 +9,10 @@ export const useQuiz = (
   setGameStatus: (status: GameStatus) => void
 ) => {
   // State for the current quiz
-  const [quiz, setQuiz] = useState([]);
+  const [quiz, setQuiz] = useState<TQuiz[]>([]);
 
   // Get the solutions for the current level
-  const solutions = useDecryptedAnswers(user.level);
+  const solutions = useDecryptedAnswers();
 
   // State for the current question index
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -25,28 +25,19 @@ export const useQuiz = (
 
   // Effect to load the quiz for the current level
   useEffect(() => {
-    import(`../../quiz/level${user.level}/quiz.ts`)
+    import(`../../quiz/level1/quiz.ts`)
       .then((module) => {
+        console.log(module.quiz);
         setQuiz(module.quiz);
         // Check if the quiz is finished
         if (currentQuestion >= module.quiz.length) {
           // Check if the user has enough points to level up
-          if (user.singleGamePoints > 7) {
-            let newLevel = user.level + 1;
-            if (newLevel > 3) {
-              newLevel = 1;
-            }
-            const newUser = { ...user, level: newLevel };
-            setUser(newUser);
-          }
+
           setGameStatus(GameStatus.EndGame);
         }
       })
-      .catch((error) =>
-        console.error(`Failed to load quiz for level ${user.level}`, error)
-      );
+      .catch((error) => console.error(`Failed to load quiz `, error));
   }, [
-    user.level,
     currentQuestion,
     user.singleGamePoints,
     setUser,
