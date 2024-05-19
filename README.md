@@ -5,9 +5,6 @@
     <h1 align="center">S2IMPACTTRIVIAREACTTSREFACTOR</h1>
 </p>
 <p align="center">
-    <em><code>► INSERT-TEXT-HERE</code></em>
-</p>
-<p align="center">
 	<img src="https://img.shields.io/github/license/boobaGreen/S2ImpactTriviaReactTSRefactor?style=flat&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/boobaGreen/S2ImpactTriviaReactTSRefactor?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/boobaGreen/S2ImpactTriviaReactTSRefactor?style=flat&color=0080ff" alt="repo-top-language">
@@ -37,8 +34,6 @@
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running S2ImpactTriviaReactTSRefactor](#-running-S2ImpactTriviaReactTSRefactor)
->   - [🧪 Tests](#-tests)
-> - [🛠 Project Roadmap](#-project-roadmap)
 > - [🤝 Contributing](#-contributing)
 > - [📄 License](#-license)
 > - [👏 Acknowledgments](#-acknowledgments)
@@ -47,13 +42,14 @@
 
 ## 📍 Overview
 
-<code>► INSERT-TEXT-HERE</code>
+<code>► this project is related to the start2Impact blockchain master specifically for the React-Typescript course. I will therefore use typescript and react mainly to create an app based on multiple-answer quizzes, the request is: You will create a web app in React to carry out a quiz dedicated to the topic of food and its impact on the environment and on people.</code>
 
 ---
 
 ## 📦 Features
 
-<code>► INSERT-TEXT-HERE</code>
+<code>► the app will open with the request to enter a username if not already present on local host. At that point we will start with the first set of multiple answer questions, there are 3 levels with 10 questions for each level. if you answer at least 6 out of 10 questions well you move on to the next level. once you have reached the third level and passed it, you will start again from the first level. At the end of each level you will receive a confirmation message whether you have passed the level or not, if so you will be able to share the experience on social media - at the moment Twitter(X) is managed -
+For each correct or incorrect answer there will be a graphic pop up to provide feedback. -</code>
 
 ---
 
@@ -112,8 +108,6 @@
     │   │       ├── originalAnsewer.json
     │   │       ├── quiz.ts
     │   │       └── solutionEncrypted.json
-    │   ├── utils
-    │   │   └── utils.ts
     │   └── vite-env.d.ts
     ├── tailwind.config.js
     ├── tsconfig.json
@@ -127,96 +121,88 @@
 
 <details closed><summary>.</summary>
 
-| File                                                                                                             | Summary                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [tsconfig.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tsconfig.json)           | <code>► INSERT-TEXT-HERE</code> |
-| [index.html](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/index.html)                 | <code>► INSERT-TEXT-HERE</code> |
-| [postcss.config.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/postcss.config.js)   | <code>► INSERT-TEXT-HERE</code> |
-| [encryptAnswers.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/encryptAnswers.js)   | <code>► INSERT-TEXT-HERE</code> |
-| [vite.config.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/vite.config.ts)         | <code>► INSERT-TEXT-HERE</code> |
-| [package.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/package.json)             | <code>► INSERT-TEXT-HERE</code> |
-| [tsconfig.node.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tsconfig.node.json) | <code>► INSERT-TEXT-HERE</code> |
-| [tailwind.config.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tailwind.config.js) | <code>► INSERT-TEXT-HERE</code> |
-| [package-lock.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/package-lock.json)   | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                             | Summary                                     |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| [tsconfig.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tsconfig.json)           | <code>► TS config files </code>             |
+| [index.html](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/index.html)                 | <code>► HTML main file </code>              |
+| [postcss.config.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/postcss.config.js)   | <code>► postcss config </code>              |
+| [encryptAnswers.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/encryptAnswers.js)   | <code>► utility for encrypted answer</code> |
+| [vite.config.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/vite.config.ts)         | <code>► vite config file</code>             |
+| [package.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/package.json)             | <code>► package json </code>                |
+| [tsconfig.node.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tsconfig.node.json) | <code>► config file </code>                 |
+| [tailwind.config.js](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/tailwind.config.js) | <code>► tailwind config </code>             |
+| [package-lock.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/package-lock.json)   | <code>► lock </code>                        |
 
 </details>
 
 <details closed><summary>src</summary>
 
-| File                                                                                                             | Summary                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [EndGame.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/EndGame.tsx)           | <code>► INSERT-TEXT-HERE</code> |
-| [ScorePopup.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/ScorePopup.tsx)     | <code>► INSERT-TEXT-HERE</code> |
-| [Header.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Header.tsx)             | <code>► INSERT-TEXT-HERE</code> |
-| [Footer.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Footer.tsx)             | <code>► INSERT-TEXT-HERE</code> |
-| [Success.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Success.tsx)           | <code>► INSERT-TEXT-HERE</code> |
-| [Logo.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Logo.tsx)                 | <code>► INSERT-TEXT-HERE</code> |
-| [Modal.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Modal.tsx)               | <code>► INSERT-TEXT-HERE</code> |
-| [main.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/main.tsx)                 | <code>► INSERT-TEXT-HERE</code> |
-| [vite-env.d.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/vite-env.d.ts)       | <code>► INSERT-TEXT-HERE</code> |
-| [UserInput.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/UserInput.tsx)       | <code>► INSERT-TEXT-HERE</code> |
-| [Layout.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Layout.tsx)             | <code>► INSERT-TEXT-HERE</code> |
-| [NoSuccess.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/NoSuccess.tsx)       | <code>► INSERT-TEXT-HERE</code> |
-| [App.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/App.tsx)                   | <code>► INSERT-TEXT-HERE</code> |
-| [Quiz.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Quiz.tsx)                 | <code>► INSERT-TEXT-HERE</code> |
-| [index.css](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/index.css)               | <code>► INSERT-TEXT-HERE</code> |
-| [QuizQuestion.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/QuizQuestion.tsx) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                             | Summary                               |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| [EndGame.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/EndGame.tsx)           | <code>► Ennd-game page</code>         |
+| [ScorePopup.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/ScorePopup.tsx)     | <code>► Score pop-up component</code> |
+| [Header.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Header.tsx)             | <code>► Header component</code>       |
+| [Footer.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Footer.tsx)             | <code>► Footer component</code>       |
+| [Success.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Success.tsx)           | <code>► Succes component</code>       |
+| [Logo.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Logo.tsx)                 | <code>► logo component</code>         |
+| [Modal.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Modal.tsx)               | <code>► Modal component</code>        |
+| [main.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/main.tsx)                 | <code>► main</code>                   |
+| [vite-env.d.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/vite-env.d.ts)       | <code>► </code>                       |
+| [UserInput.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/UserInput.tsx)       | <code>► UserInput component</code>    |
+| [Layout.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Layout.tsx)             | <code>► Main layout component</code>  |
+| [NoSuccess.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/NoSuccess.tsx)       | <code>► Nosucces component</code>     |
+| [App.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/App.tsx)                   | <code>► App component</code>          |
+| [Quiz.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/Quiz.tsx)                 | <code>► Quiz component</code>         |
+| [index.css](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/index.css)               | <code>► main style css file</code>    |
+| [QuizQuestion.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/QuizQuestion.tsx) | <code>► QuizQuestion component</code> |
 
 </details>
 
 <details closed><summary>src.quiz.level1</summary>
 
-| File                                                                                                                                     | Summary                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/solutionEncrypted.json) | <code>► INSERT-TEXT-HERE</code> |
-| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/quiz.ts)                               | <code>► INSERT-TEXT-HERE</code> |
-| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/originalAnsewer.json)     | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                                                     | Summary                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/solutionEncrypted.json) | <code>► level 1 solution encrypted</code> |
+| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/quiz.ts)                               | <code>► level 1 quiz</code>               |
+| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level1/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
 
 </details>
 
 <details closed><summary>src.quiz.level3</summary>
 
-| File                                                                                                                                     | Summary                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/solutionEncrypted.json) | <code>► INSERT-TEXT-HERE</code> |
-| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/quiz.ts)                               | <code>► INSERT-TEXT-HERE</code> |
-| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/originalAnsewer.json)     | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                                                     | Summary                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/solutionEncrypted.json) | <code>► level 2 solution encrypted</code> |
+| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/quiz.ts)                               | <code>► level 2 quiz</code>               |
+| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level3/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
 
 </details>
 
 <details closed><summary>src.quiz.level2</summary>
 
-| File                                                                                                                                     | Summary                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/solutionEncrypted.json) | <code>► INSERT-TEXT-HERE</code> |
-| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/quiz.ts)                               | <code>► INSERT-TEXT-HERE</code> |
-| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/originalAnsewer.json)     | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.utils</summary>
-
-| File                                                                                                   | Summary                         |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| [utils.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/utils/utils.ts) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                                                     | Summary                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [solutionEncrypted.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/solutionEncrypted.json) | <code>► level 3 solution encrypted</code> |
+| [quiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/quiz.ts)                               | <code>► level 3 quiz</code>               |
+| [originalAnsewer.json](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/quiz/level2/originalAnsewer.json)     | <code>► no encrypted answer </code>       |
 
 </details>
 
 <details closed><summary>src.lib.types</summary>
 
-| File                                                                                                         | Summary                         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| [types.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/types/types.tsx) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                         | Summary                                                 |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| [types.tsx](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/types/types.tsx) | <code>► GmameStatus and TUser types declarations</code> |
 
 </details>
 
 <details closed><summary>src.lib.hooks</summary>
 
-| File                                                                                                                                   | Summary                         |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [useGame.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useGame.ts)                         | <code>► INSERT-TEXT-HERE</code> |
-| [useQuiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useQuiz.ts)                         | <code>► INSERT-TEXT-HERE</code> |
-| [useDecryptedAnswers.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useDecryptedAnswers.ts) | <code>► INSERT-TEXT-HERE</code> |
+| File                                                                                                                                   | Summary                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [useGame.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useGame.ts)                         | <code>► custom hook useGame/code>              |
+| [useQuiz.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useQuiz.ts)                         | <code>► custom hook useQuiz</code>             |
+| [useDecryptedAnswers.ts](https://github.com/boobaGreen/S2ImpactTriviaReactTSRefactor/blob/master/src/lib/hooks/useDecryptedAnswers.ts) | <code>► custom hook useDecryptedAnswers</code> |
 
 </details>
 
@@ -258,21 +244,11 @@ Use the following command to run S2ImpactTriviaReactTSRefactor:
 npm run build && node dist/main.js
 ```
 
-### 🧪 Tests
-
-To execute tests, run:
+or in develpoment mode :
 
 ```sh
-npm test
+npm run dev
 ```
-
----
-
-## 🛠 Project Roadmap
-
-- [x] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
 
 ---
 
@@ -315,7 +291,7 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 
 ## 📄 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [MIT](https://choosealicense.com/licenses/mit/) License.
 
 ---
 
